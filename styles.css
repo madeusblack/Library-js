@@ -99,7 +99,7 @@ input:checked + .slider:before {
 
 
 }
-input:focus, textarea:focus, select:focus{
+input:focus, textarea:focus, select:focus {
   outline: none;
 }
 .myButton {
@@ -118,11 +118,16 @@ input:focus, textarea:focus, select:focus{
 }
 .myButton:hover {
 	background:linear-gradient(to bottom, #5cbf2a 5%, #44c767 100%);
-	background-color:#5cbf2a;
+  background-color:#5cbf2a;
+
 }
 .myButton:active {
 	position:relative;
-	top:1px;
+  top:1px;
+
+}
+.myButton:focus {
+  outline: none;
 }
 #rlabel{
   margin: 3px 0 3px 0;
