@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Library</title>
+  <meta charset="UTF-8"/> 
+  <link href="https://fonts.googleapis.com/css?family=Oxygen&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div id="maincont">
+    <div id="newbookcont"></div>
+    <div class="card">
+        <img src="newbook.jfif" alt="Avatar" style="width:100%; height: 60%;">
+          <div class="container">
+            <label for="bookname">Title:</label>
+            <input type="text" id="bookname" class="itext" name="bookname"><br>
+            <label for="author">Author:</label>
+            <input type="text" id="author" class="itext" name="author"><br>
+            <label for="pages">Pages:</label>
+            <input type="number" id="pages" class="itext" name="pages" min="1" max="15000"><br>
+            <label for="readed"> Readed?</label>
+            <label class="switch" id="rlabel">
+              <input type="checkbox" id="readed">
+    
+              <span class="slider round"></span>
+            </label> <br>
+
+            <div id="savecont"><button class="myButton" onclick="addBookToLibrary()">Save and display</button></div>
+          </div>
+      </img></div>
+    <div id="librarycont"></div>
+</div>
+    <script src="app.js"></script>
+
+</body>
+</html>
