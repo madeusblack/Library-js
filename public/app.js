@@ -1,4 +1,13 @@
-
+const firebaseConfig = {
+  apiKey: "AIzaSyCyet7ED_6HFxqnoeBwpD-pypXOX8p4tgQ",
+  authDomain: "library-c9d35.firebaseapp.com",
+  databaseURL: "https://library-c9d35.firebaseio.com",
+  projectId: "library-c9d35",
+  storageBucket: "library-c9d35.appspot.com",
+  messagingSenderId: "733859388867",
+  appId: "1:733859388867:web:703b09528fe7c439313176",
+  measurementId: "G-75RM36LCDK"
+};
 let myLibrary = [];
 lib = localStorage.getItem('datos');
 if(lib!=null){
