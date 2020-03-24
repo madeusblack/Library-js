@@ -1,5 +1,4 @@
 
-  obj=0
   let myLibrary = [];
   function Book(title, author, pages, read) {
     this.title = title
@@ -11,6 +10,7 @@
     let toret= this.title +" by "+ this.author + ", " + this.pages + " pages," + this.read
     return toret
   }
+
 function addBookToLibrary() {
    let newTitle=document.getElementById("bookname").value ;
    let newAuthor=document.getElementById("author").value;
@@ -22,11 +22,25 @@ function addBookToLibrary() {
     render()
 }
 function render(){
-        display(myLibrary[obj])
-        obj++
+  var list = document.getElementById("librarycont").hasChildNodes();
+  if (list==true){
+    console.log("rchild")
+    let element = document.getElementById("librarycont");
+    while (element.firstChild) {
+      element.removeChild(element.firstChild);
+    }
+  }
+  
+  for (index = 0; index < myLibrary.length; index++) { 
+    display(myLibrary[index],index); 
+} 
+        
+        
+   
+
 
 }
-function display(objct){
+function display(objct,indexofobj){
     contain = document.querySelector('#librarycont')
     let card = document.createElement('div');
     card.classList.add('card1');
@@ -34,18 +48,37 @@ function display(objct){
     let authdis=document.createElement('h4');
     let pagesdis=document.createElement('h4');
     let readdis=document.createElement('h4');
+    let delbutton=document.createElement('button');
+    let idobj=document.createElement('h6')
+    delbutton.classList.add('fa-close')
+    delbutton.classList.add('fa')
+    delbutton.classList.add('delbutton')
+
+    delbutton.addEventListener("click", function(){
+      testfunc(indexofobj);
+  }, false);
+    idobj.innerHTML="ID: "+indexofobj
     titledis.innerHTML="Title: "+objct.title
     authdis.innerHTML="By: "+objct.author
     pagesdis.innerHTML="N° of Pages: "+ objct.pages 
-    console.log(objct.readed)
     readdis.innerHTML="Read?: "+objct.read
+    delbutton.innerHTML="Delete Book"
+    
+
+    card.appendChild(idobj);
     card.appendChild(titledis);
     card.appendChild(authdis);
     card.appendChild(pagesdis);
     card.appendChild(readdis);
+    card.appendChild(delbutton);
     contain.appendChild(card);
 
- 
+}
+function testfunc(inx){
+  myLibrary.splice(inx, 1);
+  console.log(myLibrary)
+  render()
+
 }
 
 

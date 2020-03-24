@@ -10,6 +10,10 @@ background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
 
     
   }
+  h6{
+    margin: 0 0 3px 0;
+    color:gray;    
+  }
   
   /* On mouse-over, add a deeper shadow */
   .card:hover {
@@ -88,6 +92,13 @@ input:checked + .slider:before {
 .slider.round {
   border-radius: 34px;
 }
+label{
+  margin:5px 0 5px 0;
+}
+h4{
+  margin:5px 0 15px 5px ;
+}
+
 
 .slider.round:before {
   border-radius: 50%;
@@ -162,4 +173,19 @@ background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
 /* Add some padding inside the card container */
 .container {
   padding: 2px 16px;
+}
+
+.delbutton {
+  background-color: lightcoral; /* Blue background */
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  padding: 5px 10px; /* Some padding */
+  font-size: 16px; /* Set a font size */
+  cursor: pointer; /* Mouse pointer on hover */
+  margin:0 0 0 5px
+}
+
+/* Darker background on mouse-over */
+.delbutton:hover {
+  background-color: coral;
 }
